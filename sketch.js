@@ -13,11 +13,12 @@ function launch() {
         }
     }
 
-    setTimeout(changeScene, 6000);
+    //(changeScene, 6000);
 }
 
-function changeScene(){
+function changeScene(URL){
+    setTimeout( function() { window.location = URL }, 6000 );
+    //document.body.style.backgroundImage = "url(images/cockpit.png)";
 
-    document.body.style.backgroundImage = "url(images/cockpit.png)";
 
 }

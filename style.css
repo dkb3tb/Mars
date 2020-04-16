@@ -6,6 +6,11 @@
 
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 #rkt {
 
     width: 200px;
@@ -14,12 +19,14 @@
     transform: translate(500px, 150px);
 
 }
-body{
+#main{
     background-image: url('images/launch_pad.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#newScene{
-    background: black;
+#cockpit{
+    background-image: url("images/cockpit.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

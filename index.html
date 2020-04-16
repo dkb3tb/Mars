@@ -7,10 +7,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="sketch.js"></script>
 </head>
-<body>
+<body id="main">
     Mission to Mars
 
-    <button type="button" onclick="launch()">Launch</button>
+    <button type="button" onclick="launch()"><a href="javascript:changeScene('space.html')">Launch</a></button>
     <div class="fullscreen" id="screen">
 
         <div id="rkt">
@@ -18,7 +18,5 @@
         </div>
     </div>
 
-    <div id="newScene">
-    </div>
 </body>
 </html>
