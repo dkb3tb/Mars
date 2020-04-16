@@ -12,4 +12,12 @@ function launch() {
             rocket.style.top = pos + 'px';
         }
     }
+
+    setTimeout(changeScene, 6000);
+}
+
+function changeScene(){
+
+    document.body.style.backgroundImage = "url(images/cockpit.png)";
+
 }

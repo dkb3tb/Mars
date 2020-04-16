@@ -2,7 +2,7 @@
     position: relative;
     width: 800px;
     height: 500px;
-
+    z-index: -1;
 
 }
 
@@ -13,4 +13,13 @@
     position:absolute;
     transform: translate(500px, 150px);
 
+}
+body{
+    background-image: url('images/launch_pad.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#newScene{
+    background: black;
 }
