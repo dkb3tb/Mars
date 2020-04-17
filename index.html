@@ -7,16 +7,17 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="sketch.js"></script>
 </head>
-<body id="main">
-    Mission to Mars
+<body id="titleSreen">
 
-    <button type="button" onclick="launch()"><a href="javascript:changeScene('space.html')">Launch</a></button>
-    <div class="fullscreen" id="screen">
+    <audio id="music">
+        <source src="music.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+    </audio>
 
-        <div id="rkt">
-            <img class="rocket" src="images/rocket.png" alt="rocket">
-        </div>
-    </div>
+    <script>
+        playMusic('music')
+    </script>
 
+    <button id="begin" onclick="toLaunch('launch.html')">Click to Begin</button>
 </body>
 </html>

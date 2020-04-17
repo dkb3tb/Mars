@@ -1,3 +1,14 @@
+#titleSreen{
+    background-image: url("images/title_screen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#begin{
+    position: absolute;
+    transform: translate(1120px, 570px);
+}
+
 .fullscreen {
     position: relative;
     width: 800px;
@@ -29,4 +40,20 @@ a{
     background-image: url("images/cockpit.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.narration{
+    width: 300px;
+    height: 100px;
+    background: midnightblue;
+
+    position: absolute;
+    transform: translate(900px, 10px);
+}
+#text{
+    color: white;
+    size: 20px;
+
+    text-align: center;
+
 }
