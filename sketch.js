@@ -5,7 +5,7 @@ function toLaunch(URL) {
 function playMusic(id) {
 
     var myMusic= document.getElementById(id);
-    //myMusic.play();
+    myMusic.play();
 
 }
 
@@ -46,7 +46,7 @@ function narrateLaunch(){
 function narrateDock(){
 
     var s1 = "OK Commander, we can hear you fine now, but keep in mind that as you get farther from Earth, you can't" +
-        "get help from Mission Control immediately.";
+        " get help from Mission Control immediately.";
     var s2 = "Now that you've made it into Earth's orbit, you should rendezvous with the ISS " +
         "to pick up extra fuel and supplies";
     var s3 = "Say something intelligent about mass ratio or something here.";

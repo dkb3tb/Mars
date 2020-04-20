@@ -1,20 +1,27 @@
-#titleSreen{
+#titleScreen{
+    width: 100vw;
+    height: 100vh;
     background-image: url("images/title_screen.png");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
-#begin{
+#beginButton{
     position: absolute;
     transform: translate(1120px, 570px);
 }
 
 .fullscreen {
     position: relative;
-    width: 800px;
-    height: 500px;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 
+}
+
+body {
+    margin: 0;
 }
 
 a{
@@ -36,8 +43,10 @@ a{
     background-size: cover;
 }
 
-#cockpit{
-    background-image: url("images/cockpit.png");
+#space{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/space.gif');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -56,4 +65,13 @@ a{
 
     text-align: center;
 
+}
+#cockpit_top{
+    background-image: url('images/cockpit.png');
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
