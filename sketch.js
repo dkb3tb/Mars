@@ -91,28 +91,85 @@ function makeControls(){
 
     button1.onclick = function () {
         window.location = 'dockExp.html';
-    }
+    };
+
+    button2.onclick = function () {
+        narrateEmergency();
+    };
 }
 
-function explainDock(){
-    var s = "Oh no! The ISS passed right under you! Orbital mechanics plagued early attempts at docking spacecraft, " +
-        "most notably in the failed rendezvous of Gemini IV. James McDivitt also thought to thrust forward in order " +
-        "" +
-        "to rendezvous with the Gemini booster, sending it away and underneath his spacecraft.\n" +
-        "\n" +
-        "Because you are in orbit around the Earth, when you fire your thrusters, you are increasing your velocity, " +
-        "sending you into a higher phasing orbit. A phasing orbit is a kind of Hohmann Transfer Orbit, adjusting " +
-        "the orbital altitude of a spacecraft.\n" +
-        "\n" +
-        "In this higher orbit, the true anomaly of the spacecraft changes much more slowly due to the Conservation " +
-        "of Angular Momentum. This causes the linear distance between you and the target to increase, since its " +
-        "true anomaly is changing much faster than yours.\n" +
-        "\n" +
-        "In order to catch up with the ISS, you actually need to slow down! This puts you on a lower phasing orbit," +
-        " speeding up the rate of change of your true anomaly relative to the target. Eventually, you and the " +
-        "target will have roughly the same true anomaly, so you can fire your thrusters to move back to the " +
-        "higher orbit and rendezvous with the ISS.\n";
+function narrateEmergency(){
+    var s1 = "For the love of Pluto! Something has gone wrong! " +
+        "None of the crew knows what to do, so you have to ask Mission Control for help!";
+    var s2  = "Type the answer into the text area and press 'Enter' when you get it. Ask for help before the timer runs out!";
+    var text = document.getElementById("text");
 
-    var text = document.getElementById("dockText");
-    text.innerHTML = s;
+    text.innerHTML = s1;
+    setTimeout(function () {text.innerHTML = s2}, 4000);
+    makeEmergencyControls();
+}
+
+function makeEmergencyControls(){
+
+    var text = document.getElementById("text");
+
+    var button1 = document.getElementById("input1");
+    var button2 = document.getElementById("input3");
+    var input = document.getElementById("input2");
+
+    var answer = "Houston, we have a problem."
+
+    input.addEventListener("keypress", function(event) {
+
+            if (event.code === 'Enter'  && input.value === answer) {
+                console.log("correct");
+                clearInterval(id);
+                countdown.innerHTML = "";
+                //setTimeout(questionTwo, 3500);
+            }
+            else if (event.code === 'Enter' && input.value !== "answer") {
+                window.location = 'delayExp.html';
+            }
+        }
+    );
+
+
+    button1.value = "            ";
+    button2.value = "Mission Control";
+
+    var react;
+
+    button1.onclick = function () { };
+
+    button2.onclick = function () {
+        react = time;
+        text.innerHTML = "Waiting for a reply...This could be a while."
+        console.log(react);
+    };
+
+
+    var countdown = document.getElementById("view");
+
+    var time = 40;
+    var delay = 30;
+    var id = setInterval(frame, 1000);
+
+    function frame() {
+
+        if (time === 0) {
+            window.location = 'delayExp.html';
+            clearInterval(id);
+        } else {
+            setTimeout(function () {
+                time--;
+                react--;
+                delay--;
+            }, 1000);
+        }
+        countdown.innerHTML = time.toString();
+
+        if(delay === 0 && time > 0){
+            text.innerHTML = "The answer is: \n" + answer;
+        }
+    }
 }

@@ -54,9 +54,10 @@ a{
 }
 
 #view{
+    color: yellow;
     position: absolute;
     transform: translate(750px, 120px);
-    z-index: 0;
+    z-index: 10;
 }
 
 #viewObject{
@@ -110,7 +111,7 @@ a{
 }
 
 #failscreen{
-    width: 60vmax;
+    width: 70vmax;
     height: auto;
     position: absolute;
     align-content: center;
