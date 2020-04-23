@@ -26,7 +26,8 @@ body {
 
 a{
     text-decoration: none;
-    color: black;
+    color: yellow;
+    z-index: 10;
 }
 
 #rkt {
@@ -43,12 +44,24 @@ a{
     background-size: cover;
 }
 
-#space{
+.space{
     width: 100vw;
     height: 100vh;
+    position: relative;
     background-image: url('images/space.gif');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#view{
+    position: absolute;
+    transform: translate(750px, 120px);
+    z-index: 0;
+}
+
+#viewObject{
+    max-width: 60%;
+    height: auto;
 }
 
 .narration{
@@ -74,4 +87,42 @@ a{
     z-index: 1;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#controls{
+    position: absolute;
+    width: max-content;
+    transform: translate(20vmax, 89vmin);
+    z-index: 5;
+}
+
+#input1{
+    position: absolute;
+}
+#input2{
+    position: absolute;
+    width: 15vmax;
+    transform: translateX(23vmax);
+}
+#input3{
+    position: absolute;
+    transform: translateX(52vmax);
+}
+
+#failscreen{
+    width: 60vmax;
+    height: auto;
+    position: absolute;
+    align-content: center;
+    transform: translate(20vmax, 20vmin);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dockText{
+    color: yellow;
+    size: 20px;
+    z-index: 1;
+    text-align: center;
 }

@@ -8,14 +8,29 @@
     <script src="sketch.js"></script>
 </head>
 <body>
-    <div id="space">
+    <div class="space">
+        <div id="view">
+            <img id="viewObject" src="images/placeholder.png" alt="stars">
+        </div>
+
         <div id="cockpit_top">
             <div class="narration">
                 <p id="text"></p>
                 <script>
                     narrateDock()
+                    dockISS()
                 </script>
             </div>
+
+        </div>
+        <div id="controls">
+            <input type="button" id="input1">
+            <input type="text" id="input2">
+            <input type="button" id="input3">
+
+            <script>
+                makeControls()
+            </script>
         </div>
     </div>
 </body>

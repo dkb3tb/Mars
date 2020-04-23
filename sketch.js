@@ -5,7 +5,7 @@ function toLaunch(URL) {
 function playMusic(id) {
 
     var myMusic= document.getElementById(id);
-    myMusic.play();
+    //myMusic.play();
 
 }
 
@@ -23,6 +23,8 @@ function launch() {
             rocket.style.top = pos + 'px';
         }
     }
+
+    changeScene('space.html');
 }
 
 function changeScene(URL){
@@ -57,4 +59,60 @@ function narrateDock(){
     setTimeout(function(){text.innerHTML = s2}, 6000);
     setTimeout(function(){text.innerHTML = s3}, 12000);
     setTimeout(function(){text.innerHTML = s4}, 18000);
+}
+
+function dockISS(){
+    var iss = document.getElementById("viewObject");
+
+
+    setTimeout(function() {
+        iss.src = "images/iss.png";
+        var size = 0;
+        var id = setInterval(frame, 10);
+
+        function frame() {
+            if (size === 300) {
+                clearInterval(id);
+            } else {
+                size++;
+                iss.style.width = size + 'px';
+            }
+        }
+    },
+    20000);
+}
+
+function makeControls(){
+    var button1 = document.getElementById("input1");
+    var button2 = document.getElementById("input3");
+
+    button1.value = "Thrust Forward";
+    button2.value = "Thrust Backward";
+
+    button1.onclick = function () {
+        window.location = 'dockExp.html';
+    }
+}
+
+function explainDock(){
+    var s = "Oh no! The ISS passed right under you! Orbital mechanics plagued early attempts at docking spacecraft, " +
+        "most notably in the failed rendezvous of Gemini IV. James McDivitt also thought to thrust forward in order " +
+        "" +
+        "to rendezvous with the Gemini booster, sending it away and underneath his spacecraft.\n" +
+        "\n" +
+        "Because you are in orbit around the Earth, when you fire your thrusters, you are increasing your velocity, " +
+        "sending you into a higher phasing orbit. A phasing orbit is a kind of Hohmann Transfer Orbit, adjusting " +
+        "the orbital altitude of a spacecraft.\n" +
+        "\n" +
+        "In this higher orbit, the true anomaly of the spacecraft changes much more slowly due to the Conservation " +
+        "of Angular Momentum. This causes the linear distance between you and the target to increase, since its " +
+        "true anomaly is changing much faster than yours.\n" +
+        "\n" +
+        "In order to catch up with the ISS, you actually need to slow down! This puts you on a lower phasing orbit," +
+        " speeding up the rate of change of your true anomaly relative to the target. Eventually, you and the " +
+        "target will have roughly the same true anomaly, so you can fire your thrusters to move back to the " +
+        "higher orbit and rendezvous with the ISS.\n";
+
+    var text = document.getElementById("dockText");
+    text.innerHTML = s;
 }
