@@ -7,32 +7,24 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="sketch.js"></script>
 </head>
-<body id="main">
-Mission to Mars
+<body>
+    <audio id="chatter">
+        <source src="chatter.mp3" type="audio/mpeg">
+        <source src="chatter.ogg" type="audio/ogg">
+    </audio>
 
-<audio id="chatter">
-    <source src="chatter.mp3" type="audio/mpeg">
-    <source src="chatter.ogg" type="audio/ogg">
-</audio>
-
-<button type="button" onclick="launch()">Launch</button>
-<div class="fullscreen" id="screen">
-
-    <div id="rkt">
-        <img class="rocket" src="images/rocket.png" alt="rocket">
+    <div class="launchScreen">
+        <div id="rkt">
+            <img class="rocket" src="images/rocket.png" alt="rocket">
+        </div>
+        <div class="narration">
+            <p id="text"></p>
+            <script>
+                playMusic('chatter')
+                narrateLaunch()
+            </script>
+        </div>
+        <button id="launchButton" type="button" onclick="launch()">Launch</button>
     </div>
-
-    <div class="narration">
-        <p id="text"></p>
-        <script>
-            playMusic('chatter')
-            narrateLaunch()
-        </script>
-    </div>
-
-
-
-</div>
-
 </body>
 </html>

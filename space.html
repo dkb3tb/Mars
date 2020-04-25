@@ -8,8 +8,16 @@
     <script src="sketch.js"></script>
 </head>
 <body>
+    <audio id="spaceMusic">
+        <source src="music.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+    </audio>
+    <script>
+        playMusic('spaceMusic')
+    </script>
     <div class="space">
         <div id="view">
+            <div id="countdown"></div>
             <img id="viewObject" src="images/placeholder.png" alt="stars">
         </div>
 

@@ -5,7 +5,7 @@ function toLaunch(URL) {
 function playMusic(id) {
 
     var myMusic= document.getElementById(id);
-    //myMusic.play();
+    myMusic.play();
 
 }
 
@@ -62,6 +62,7 @@ function narrateDock(){
 }
 
 function dockISS(){
+    console.log("dock iss called");
     var iss = document.getElementById("viewObject");
 
 
@@ -94,6 +95,7 @@ function makeControls(){
     };
 
     button2.onclick = function () {
+        document.getElementById("viewObject").src = "images/placeholder.png";
         narrateEmergency();
     };
 }
@@ -122,10 +124,10 @@ function makeEmergencyControls(){
     input.addEventListener("keypress", function(event) {
 
             if (event.code === 'Enter'  && input.value === answer) {
-                console.log("correct");
                 clearInterval(id);
+                input.value = "";
                 countdown.innerHTML = "";
-                //setTimeout(questionTwo, 3500);
+                narrateLanding();
             }
             else if (event.code === 'Enter' && input.value !== "answer") {
                 window.location = 'delayExp.html';
@@ -148,7 +150,7 @@ function makeEmergencyControls(){
     };
 
 
-    var countdown = document.getElementById("view");
+    var countdown = document.getElementById("countdown");
 
     var time = 40;
     var delay = 30;
@@ -172,4 +174,75 @@ function makeEmergencyControls(){
             text.innerHTML = "The answer is: \n" + answer;
         }
     }
+}
+
+function enterMars() {
+    var mars = document.getElementById("viewObject");
+    mars.src = "images/mars.png";
+    var size = 0;
+    var id = setInterval(frame, 10);
+
+    function frame() {
+        if (size === 300) {
+            clearInterval(id);
+        } else {
+            size++;
+            mars.style.width = size + 'px';
+        }
+    }
+
+
+}
+
+function narrateLanding(){
+
+    enterMars();
+
+    var text = document.getElementById("text");
+
+    var s1 = "Congradulations, Commander! You've arrived at Mars! All that's left is the landing. " +
+        "Input your desired angle of entry into the telemetry input bar so that you may enter the Martian " +
+        "atmosphere.";
+    var s2 = "Be careful not to be too steep or shallow. You're Entering the atmosphere at thousands " +
+        "of miles an hour, so if you're too steep, you'll burn up, but if you're too shallow, you skip right off.";
+
+    setTimeout(function(){text.innerHTML = s1}, 5000);
+    setTimeout(function () {text.innerHTML = s2}, 10000);
+    makeLandingControls();
+}
+
+function makeLandingControls() {
+
+    var text = document.getElementById("text");
+
+    var button1 = document.getElementById("input1");
+    var button2 = document.getElementById("input3");
+    var input = document.getElementById("input2");
+
+    button1.value = "            ";
+    button2.value = "            ";
+
+    var correct;
+
+    input.addEventListener("keypress", function(event) {
+
+            if(isNaN(input.value)){
+                text.innerHTML = "Input an integer value!";
+            }else{
+                if(parseInt(input.value) >= 11 && parseInt(input.value) <= 13){
+                    correct = true;
+                }else{
+                    correct = false;
+                }
+            }
+
+            if (event.code === 'Enter'  && correct === true) {
+                window.location = 'victory.html';
+            }
+            else if (event.code === 'Enter' && correct === false) {
+                window.location = 'delayExp.html';
+            }
+        }
+    );
+
 }

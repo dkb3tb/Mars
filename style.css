@@ -9,7 +9,12 @@
 
 #beginButton{
     position: absolute;
-    transform: translate(1120px, 570px);
+    transform: translate(87vmax, 93vmin);
+}
+
+#expButton{
+    position: absolute;
+    transform: translate(5vmax, 93vmin);
 }
 
 .fullscreen {
@@ -18,6 +23,22 @@
     height: 100vh;
     z-index: -1;
 
+}
+
+#explanations{
+    text-align: center;
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+}
+
+#links{
+    width: 25vmax;
+    height: auto;
+    align-content: center;
+    alignment: center;
+    align-items: center;
+    align-self: center;
 }
 
 body {
@@ -30,18 +51,27 @@ a{
     z-index: 10;
 }
 
-#rkt {
+.launchScreen{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/launch_pad.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
+#rkt {
     width: 200px;
     height: 400px;
     position:absolute;
-    transform: translate(500px, 150px);
+    transform: translate(40vmax, 30vmin);
 
 }
-#main{
-    background-image: url('images/launch_pad.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+
+
+#launchButton{
+    transform: translate(46vmax, 95vmin);
 }
 
 .space{
@@ -67,7 +97,7 @@ a{
 
 .narration{
     width: 300px;
-    height: 100px;
+    height: 125px;
     background: midnightblue;
 
     position: absolute;
@@ -115,7 +145,7 @@ a{
     height: auto;
     position: absolute;
     align-content: center;
-    transform: translate(20vmax, 20vmin);
+    transform: translate(20vmax, 15vmin);
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,4 +156,30 @@ a{
     size: 20px;
     z-index: 1;
     text-align: center;
+}
+
+#vicScreen{
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+
+    background-image: url('images/terrain.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#vic{
+    transform: translateY(20vmin);
+    text-align: center;
+    color: yellow;
+    font-size: 64px;
+    align-self: center;
+}
+#vicText{
+    transform: translateY(17vmin);
+}
+#vicToTitle{
+    transform: translate(47vmax, 75vmin);
+    z-index: 20;
 }
