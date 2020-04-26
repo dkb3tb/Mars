@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch.js"></script>
+</head>
+<body>
+    <div class="space">
+    <div id="failscreen">
+        <p class="dockText">
+            Oh no! The ISS passed right under you! Orbital mechanics plagued early attempts at docking spacecraft,
+            most notably in the failed rendezvous of Gemini IV. James McDivitt also thought to thrust forward in
+            order to rendezvous with the Gemini booster, sending it away and underneath his spacecraft.
+        </p>
+        <p class="dockText">
+            Because you are in orbit around the Earth, when you fire your thrusters, you are increasing your velocity,
+            sending you into a higher phasing orbit. A phasing orbit is a kind of Hohmann Transfer Orbit,
+            adjusting the orbital altitude of a spacecraft.
+        </p>
+        <p class="dockText">
+            In this higher orbit, the true anomaly of the spacecraft changes much more slowly due to the
+            Conservation of Angular Momentum. This causes the linear distance between you and the target to increase,
+            since its true anomaly is changing much faster than yours.
+        </p>
+        <p class="dockText">
+            In order to catch up with the ISS, you actually need to slow down! This puts you on a lower phasing orbit,
+            speeding up the rate of change of your true anomaly relative to the target. Eventually, you and the target
+            will have roughly the same true anomaly, so you can fire your thrusters to move back to the higher orbit
+            and rendezvous with the ISS.
+        </p>
+        <p class="dockText">
+            <a href="https://www.faa.gov/about/office_org/headquarters_offices/avs/offices/aam/cami/library/online_libraries/aerospace_medicine/tutorial/media/III.4.1.5_Maneuvering_in_Space.pdf">
+                Maneuvering in Space
+            </a>
+
+        </p>
+
+        <p class="dockText">
+            <a href="https://www.sciencedirect.com/topics/engineering/phasing-maneuver">
+                Phasing Maneuvers
+            </a>
+        </p>
+        <div id="return">
+            <p class="dockText">
+                <a href="space.html">
+                    Try Again
+                </a>
+
+            </p>
+            <p class="dockText">
+                <a href="explanations.html">
+                    Back to Explanations
+                </a>
+            </p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

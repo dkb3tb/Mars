@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch.js"></script>
+</head>
+<body>
+    <audio id="spaceMusic">
+        <source src="music.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+    </audio>
+    <script>
+        playMusic('spaceMusic')
+    </script>
+    <div class="space">
+        <div id="view">
+            <div id="countdown"></div>
+            <img id="viewObject" src="images/placeholder.png" alt="stars">
+        </div>
+
+        <div id="cockpit_top">
+            <div class="narration">
+                <p id="text"></p>
+                <script>
+                    narrateDock()
+                    dockISS()
+                </script>
+            </div>
+
+        </div>
+        <div id="controls">
+            <input type="button" id="input1">
+            <input type="text" id="input2">
+            <input type="button" id="input3">
+            <input type="text" id="input4">
+            <input type="text" id="input5">
+            <input type="text" id="input6">
+
+
+            <script>
+                makeControls()
+            </script>
+        </div>
+    </div>
+</body>
+</html>

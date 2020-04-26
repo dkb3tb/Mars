@@ -8,13 +8,18 @@
     <script src="sketch.js"></script>
 </head>
 <body>
-    Mission to Mars
+    <div id="titleScreen">
+        <audio id="music">
+            <source src="music.mp3" type="audio/mpeg">
+            <source src="music.ogg" type="audio/ogg">
+        </audio>
 
-    <button type="button" onclick="launch()">Launch</button>
-    <div class="fullscreen">
-        <div id="rkt">
-            <img class="rocket" src="images/rocket.png" alt="rocket">
-        </div>
+        <script>
+            playMusic('music')
+        </script>
+
+        <button id="beginButton" onclick="toLaunch('launch.html')">Click to Begin</button>
+        <button id="expButton" onclick="changeScene2('explanations.html')">See Explanations</button>
     </div>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Launch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch.js"></script>
+</head>
+<body>
+    <audio id="chatter">
+        <source src="chatter.mp3" type="audio/mpeg">
+        <source src="chatter.ogg" type="audio/ogg">
+    </audio>
+
+    <div class="launchScreen">
+        <div id="rkt">
+            <img class="rocket" src="images/rocket.png" alt="rocket">
+        </div>
+        <div class="narration">
+            <p id="text"></p>
+            <script>
+                playMusic('chatter')
+                narrateLaunch()
+            </script>
+        </div>
+        <button id="launchButton" type="button" onclick="launch()">Launch</button>
+    </div>
+</body>
+</html>

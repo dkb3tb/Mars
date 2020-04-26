@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch.js"></script>
+</head>
+<body>
+    <audio id="spaceMusic">
+        <source src="music.mp3" type="audio/mpeg">
+        <source src="music.ogg" type="audio/ogg">
+    </audio>
+    <script>
+        playMusic('spaceMusic')
+    </script>
+    <div id="vicScreen">
+        <div id="vic">
+            Victory!
+        </div>
+        <p class="dockText" id="vicText">
+            Congratulations, Commander! You've successfully landed on Mars!
+        </p>
+        <button id="vicToTitle" onclick="changeScene2('index.html')">To Title Screen</button>
+    </div>
+</body>
+</html>

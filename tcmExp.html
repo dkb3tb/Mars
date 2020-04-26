@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch.js"></script>
+</head>
+<body>
+<div class="space">
+    <div id="failscreen">
+        <p class="dockText">
+            Shoot! We've gone off course! On a mission to Mars, a ship will travel for seven months, and hundreds of
+            millions of miles through space. The trajectory will, at some point, need to be corrected in order for the
+            astronauts to reach the red planet.
+        </p>
+        <p class="dockText">
+            On a mission to Mars, a ship will travel for seven months, and hundreds of millions of miles through space.
+            The trajectory will, at some point, need to be corrected in order for the astronauts to reach the red planet.
+        </p>
+        <p class="dockText">
+            To correct the path of the orbiter, they will perform what is called a trajectory correction maneuver (TCM).
+            Multiple TCMs may be necessary. The first and often largest maneuver removes injection errors and points the
+            craft in the right direction. Subsequent maneuvers will remove errors from previous TCMs and other general
+            erros in flight.
+        </p>
+        <p class="dockText">
+            In performing a TCM, it's important for the system to be able to have a sense of direction. The Euler angles
+            (Tait-Bryan angles when applied to aerodynamics) allow for representation of orientation on a mobile frame
+            of reference.
+        </p>
+        <p class="dockText">
+            The "roll", or angle of rotation about the horizontal axis, is in line with the primary direction of thrust.
+            This parameter is important for altitude control.
+        </p>
+        <p class="dockText">
+            Using the moment of inertia about the roll axis, as well as angular acceleration, Newton's second law can be
+            rewritten as T = I*a. Using this formula, we are able to calculate the net torque exerted on a vehicle. With
+            torque, the resulting force (thrust of one thruster) perpendicular to the roll axis can be derived.
+        </p>
+        <p class="dockText">
+            F. P. Beer, E. R. Johnston, D. F. Mazurek, and S. Sanghi, Vector mechanics for engineers.
+            Singapore: McGraw-Hill Education, 2020.
+        </p>
+        <p class="dockText">
+            “Cruise: Trajectory Correction Maneuvers,” NASA. [Online].
+                Available: https://mars.nasa.gov/mro/mission/timeline/mtcruise/cruisetcms/.
+        </p>
+
+        <p class="dockText">
+            <a href="https://mars.nasa.gov/mro/mission/timeline/mtcruise/cruisetcms/">
+                Cruise: Trajectory Correction Maneuvers
+            </a>
+        </p>
+        <p class="dockText">
+            <a href="https://en.wikipedia.org/wiki/Flight_dynamics_(spacecraft)">
+                Flight Dynamics (Spacecraft)
+            </a>
+        </p>
+        <div id="return">
+            <p class="dockText">
+                <a href="space.html">
+                    Try Again
+                </a>
+
+            </p>
+            <p class="dockText">
+                <a href="explanations.html">
+                    Back to Explanations
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

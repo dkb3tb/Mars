@@ -1,16 +1,219 @@
+#titleScreen{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/title_screen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#beginButton{
+    position: absolute;
+    transform: translate(87vmax, 93vmin);
+}
+
+#expButton{
+    position: absolute;
+    transform: translate(5vmax, 93vmin);
+}
+
 .fullscreen {
     position: relative;
-    width: 800px;
-    height: 500px;
-
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
 
 }
 
-#rkt {
+#explanations{
+    text-align: center;
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+}
 
+#links{
+    width: 30vmax;
+    height: auto;
+    align-content: center;
+    alignment: center;
+    align-items: center;
+    align-self: center;
+}
+
+
+.back{
+    transform: translateY(100vmin);
+}
+
+body {
+    margin: 0;
+}
+
+a:link {
+    color: red;
+    text-decoration: underline;
+    background-color: transparent;
+    z-index: 10;
+}
+a:hover {
+    color: yellow;
+    text-decoration: underline;
+    background-color: transparent;
+    z-index: 10;
+}
+
+a:visited{
+    color: orange;
+}
+
+.launchScreen{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/launch_pad.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#rkt {
     width: 200px;
     height: 400px;
     position:absolute;
-    transform: translate(500px, 150px);
+    transform: translate(40vmax, 30vmin);
 
+}
+
+
+#launchButton{
+    transform: translate(46vmax, 95vmin);
+}
+
+.space{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url('images/space.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#view{
+    color: yellow;
+    position: absolute;
+    transform: translate(750px, 120px);
+    z-index: 10;
+}
+
+#viewObject{
+    max-width: 60%;
+    height: auto;
+}
+
+.narration{
+    width: 300px;
+    height: 125px;
+    background: midnightblue;
+
+    position: absolute;
+    transform: translate(75vmax, 5vmin);
+}
+#text{
+    color: white;
+    size: 20px;
+
+    text-align: center;
+
+}
+#cockpit_top{
+    background-image: url('images/cockpit.png');
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#controls{
+    position: absolute;
+    width: max-content;
+    transform: translate(20vmax, 89vmin);
+    z-index: 5;
+}
+
+#input1{
+    position: absolute;
+}
+#input2{
+    position: absolute;
+    width: 15vmax;
+    transform: translateX(23vmax);
+}
+#input3{
+    position: absolute;
+    transform: translateX(52vmax);
+}
+#input4{
+    position: absolute;
+    width: 15vmax;
+    transform: translateX(23vmax);
+    z-index: -1;
+}
+#input5{
+    position: absolute;
+    width: 15vmax;
+    transform: translateX(23vmax);
+    z-index: -2;
+}
+#input6{
+    position: absolute;
+    width: 15vmax;
+    transform: translateX(23vmax);
+    z-index: -3;
+}
+
+#failscreen{
+    width: 70vmax;
+    height: auto;
+    position: absolute;
+    align-content: center;
+    transform: translate(20vmax, 5vmin);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dockText{
+    color: yellow;
+    size: 20px;
+    z-index: 1;
+    text-align: center;
+}
+
+#vicScreen{
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+
+    background-image: url('images/terrain.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#vic{
+    transform: translateY(20vmin);
+    text-align: center;
+    color: yellow;
+    font-size: 64px;
+    align-self: center;
+}
+#vicText{
+    transform: translateY(17vmin);
+}
+#vicToTitle{
+    transform: translate(47vmax, 75vmin);
+    z-index: 20;
 }
