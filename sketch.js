@@ -51,14 +51,12 @@ function narrateDock(){
         " get help from Mission Control immediately.";
     var s2 = "Now that you've made it into Earth's orbit, you should rendezvous with the ISS " +
         "to pick up extra fuel and supplies";
-    var s3 = "Say something intelligent about mass ratio or something here.";
-    var s4 = "When you see the ISS come into view, use the controls to fire your boosters.";
+    var s3 = "When you see the ISS come into view, use the controls to fire your boosters.";
 
     var text = document.getElementById("text");
     text.innerHTML = s1;
     setTimeout(function(){text.innerHTML = s2}, 6000);
     setTimeout(function(){text.innerHTML = s3}, 12000);
-    setTimeout(function(){text.innerHTML = s4}, 18000);
 }
 
 function dockISS(){
@@ -80,7 +78,7 @@ function dockISS(){
             }
         }
     },
-    20000);
+    12000);
 }
 
 function makeControls(){
@@ -206,8 +204,8 @@ function narrateLanding(){
     var s2 = "Be careful not to be too steep or shallow. You're Entering the atmosphere at thousands " +
         "of miles an hour, so if you're too steep, you'll burn up, but if you're too shallow, you skip right off.";
 
-    setTimeout(function(){text.innerHTML = s1}, 5000);
-    setTimeout(function () {text.innerHTML = s2}, 10000);
+    setTimeout(function(){text.innerHTML = s1}, 1000);
+    setTimeout(function () {text.innerHTML = s2}, 7000);
     makeLandingControls();
 }
 

@@ -41,6 +41,10 @@
     align-self: center;
 }
 
+#back{
+    transform: translateY(20vmin);
+}
+
 body {
     margin: 0;
 }
@@ -145,7 +149,7 @@ a{
     height: auto;
     position: absolute;
     align-content: center;
-    transform: translate(20vmax, 15vmin);
+    transform: translate(20vmax, 10vmin);
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -182,4 +186,5 @@ a{
 #vicToTitle{
     transform: translate(47vmax, 75vmin);
     z-index: 20;
+    margin: 0;
 }
