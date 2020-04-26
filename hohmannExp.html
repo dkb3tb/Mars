@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="sketch.js"></script>
+</head>
+<body>
+<div class="space">
+    <div id="failscreen">
+        <p class="dockText">
+            Unfortunately, you never entered the Hohmann transfer orbit to Mars properly. Precise calculations are
+            needed in spacelfight. There is very little room for error, much like there is when you pilot a vehicle
+            on Earth.
+        </p>
+        <p class="dockText">
+            The Hohmann transfer allows us to use the least amount of fuel possible. The rocket is already in solar
+            orbit, and this needs to be adjusted. The desired orbit's perihelion will be at the distance of Earth's,
+            while the aphelion will be at the distance of Mars'.
+        </p>
+        <p class="dockText">
+            In order to find the required delta-v of the transfer orbit, we needed to first find the semimajor axis of
+            the transfer orbit. This is accomplished by taking the average of the semimajor axes of Earth and Mars,
+            which is 1.762.
+        </p>
+        <p class="dockText">
+            The vis-viva equation helps us to calculate the delta-v required for the transfer maneuver. Delta-v
+            is defined as the difference between the transfer perigee velocity and that of the LEO velocity. To find
+            these intermediate velocities, we use radius from Earth, semimajor axis of orbit, and the standard
+            gravitational parameter of the central body in the vis-viva equation.
+        </p>
+        <p class="dockText">
+            “Basics of Space Flight - Solar System Exploration: NASA Science,” NASA. [Online].
+                Available: https://solarsystem.nasa.gov/basics/chapter4-1/.
+        </p>
+        <p class="dockText">
+            Hohmann Transfer. [Online].
+                Available: https://ai-solutions.com/_freeflyeruniversityguide/hohmann_transfer.htm.
+        </p>
+
+        <p class="dockText">
+            <a href="https://solarsystem.nasa.gov/basics/chapter4-1/">
+                Basics of Spaceflight - Trajectories
+            </a>
+        </p>
+        <p class="dockText">
+            <a href="https://ai-solutions.com/_freeflyeruniversityguide/hohmann_transfer.htm">
+                Hohmann Transfer
+            </a>
+        </p>
+        <div id="return">
+            <p class="dockText">
+                <a href="space.html">
+                    Try Again
+                </a>
+
+            </p>
+            <p class="dockText">
+                <a href="explanations.html">
+                    Back to Explanations
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

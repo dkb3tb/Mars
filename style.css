@@ -33,7 +33,7 @@
 }
 
 #links{
-    width: 25vmax;
+    width: 30vmax;
     height: auto;
     align-content: center;
     alignment: center;
@@ -41,18 +41,30 @@
     align-self: center;
 }
 
-#back{
-    transform: translateY(20vmin);
+
+.back{
+    transform: translateY(100vmin);
 }
 
 body {
     margin: 0;
 }
 
-a{
-    text-decoration: none;
-    color: yellow;
+a:link {
+    color: red;
+    text-decoration: underline;
+    background-color: transparent;
     z-index: 10;
+}
+a:hover {
+    color: yellow;
+    text-decoration: underline;
+    background-color: transparent;
+    z-index: 10;
+}
+
+a:visited{
+    color: orange;
 }
 
 .launchScreen{
@@ -143,13 +155,31 @@ a{
     position: absolute;
     transform: translateX(52vmax);
 }
+#input4{
+    position: absolute;
+    width: 15vmax;
+    transform: translateX(23vmax);
+    z-index: -1;
+}
+#input5{
+    position: absolute;
+    width: 15vmax;
+    transform: translateX(23vmax);
+    z-index: -2;
+}
+#input6{
+    position: absolute;
+    width: 15vmax;
+    transform: translateX(23vmax);
+    z-index: -3;
+}
 
 #failscreen{
     width: 70vmax;
     height: auto;
     position: absolute;
     align-content: center;
-    transform: translate(20vmax, 10vmin);
+    transform: translate(20vmax, 5vmin);
 
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,5 +216,4 @@ a{
 #vicToTitle{
     transform: translate(47vmax, 75vmin);
     z-index: 20;
-    margin: 0;
 }
